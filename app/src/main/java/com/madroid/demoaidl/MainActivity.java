@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*For demonstrating sensor info capture is working*/
     private void getSensorInfo() {
         try {
             String info = mSensorInfo.getSensorData();

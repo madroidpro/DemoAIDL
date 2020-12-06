@@ -1,8 +1,5 @@
 package com.madroid.aidlsdkserver;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +13,9 @@ import android.os.RemoteException;
 import com.madroid.aidlsdkserver.databinding.ActivityClientBinding;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 public class ClientActivity extends AppCompatActivity {
     private ActivityClientBinding mBinding;
@@ -39,7 +39,7 @@ public class ClientActivity extends AppCompatActivity {
 
     private void initBind() {
         Intent intent = new Intent("com.example.aidlsdkserver.AIDL"); //AIDL server intent
-        bindService(convertImplicitIntentToExplicitIntent(intent,this), serviceConnection, BIND_AUTO_CREATE);
+        bindService(convertImplicitIntentToExplicitIntent(intent, this), serviceConnection, BIND_AUTO_CREATE);
     }
 
     ServiceConnection serviceConnection = new ServiceConnection() {
@@ -55,6 +55,7 @@ public class ClientActivity extends AppCompatActivity {
         }
     };
 
+    /*We will need to convert intent to explicit intent to access the service from other APP*/
     public static Intent convertImplicitIntentToExplicitIntent(Intent implicitIntent, Context context) {
         PackageManager pm = context.getPackageManager();
         List<ResolveInfo> resolveInfoList = pm.queryIntentServices(implicitIntent, 0);
