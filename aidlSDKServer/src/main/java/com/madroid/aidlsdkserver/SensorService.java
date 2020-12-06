@@ -1,4 +1,4 @@
-package com.example.aidlsdkserver;
+package com.madroid.aidlsdkserver;
 
 import android.app.Activity;
 import android.app.Service;

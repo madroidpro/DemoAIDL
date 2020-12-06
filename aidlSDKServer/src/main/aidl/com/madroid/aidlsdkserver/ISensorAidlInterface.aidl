@@ -1,5 +1,5 @@
 // ISensorAidlInterface.aidl
-package com.example.aidlsdkserver;
+package com.madroid.aidlsdkserver;
 
 // Declare any non-default types here with import statements
 

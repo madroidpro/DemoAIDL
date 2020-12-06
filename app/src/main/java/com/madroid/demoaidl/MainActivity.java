@@ -1,4 +1,4 @@
-package com.example.demoaidl;
+package com.madroid.demoaidl;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -10,12 +10,12 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import com.example.aidlsdkserver.ISensorAidlInterface;
-import com.example.aidlsdkserver.SensorService;
-import com.example.demoaidl.databinding.ActivityMainBinding;
+import com.madroid.aidlsdkserver.ISensorAidlInterface;
+import com.madroid.aidlsdkserver.SensorService;
+import com.madroid.demoaidl.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    ISensorAidlInterface mSensorInfo;
+    private ISensorAidlInterface mSensorInfo;
     private ActivityMainBinding mBinding;
 
     @Override
