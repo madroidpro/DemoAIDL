@@ -1,0 +1,4 @@
+include ':sensoraidlclient'
+include ':aidlSDKServer'
+include ':app'
+rootProject.name = "DemoAIDL"
